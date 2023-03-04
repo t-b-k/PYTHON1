@@ -41,7 +41,7 @@ print(list_2)
 a = list_2[2]
 print(a)
 
-list_2.insert(0,11)
+list_2.insert(0,11) # Метод insert не возвращает никаких значений, поэтому вставить его напрямую в print нельзя
 print(list_2) # ПОЧЕМУ-ТО НЕ РАБОТАЕТ
 
 
