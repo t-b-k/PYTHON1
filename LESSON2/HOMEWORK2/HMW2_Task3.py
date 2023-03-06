@@ -14,7 +14,7 @@ production = 1
 if n > 0 : 
     print(f"\nВот вам все натуральные степени числа 2, не превосходящие {n}:")
     while production <= n : 
-        print(production)
+        print(production, end = " ")
         production *= 2
 else: 
     print(f"\nВы ввели ненатуральное число.")
