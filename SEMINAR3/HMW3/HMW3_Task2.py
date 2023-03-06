@@ -22,10 +22,10 @@ x = int(input("Введите теперь число X, ближайший эл
 
 result_array = [abs(array[i]-x) for i in range(n)].sort()
 
-for i in range(n) : 
+#for i in range(n) : 
 
 
-print([abs(array[i]-x) for i in range(n)].sort()[0])
+# print([abs(array[i]-x) for i in range(n)].sort()[0])
 
 # print(dir(array))
 
