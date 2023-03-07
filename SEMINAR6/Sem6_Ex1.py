@@ -12,7 +12,7 @@ for _ in range(count1) :
 
 count1 = int(input('Введите кол-во элементов в первом массиве => '))
 list_2 = []
-for _ in range(count2) : 
+for _ in range(count1) : 
     list_2.append(int(input('\tЭлемент массива 1 => ')))
 
 print([x for x in list_1 if x not in set(list_2)])
