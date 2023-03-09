@@ -11,17 +11,17 @@ import os
 
 # смена текущего директория
 
-os.chdir ('C:\Users\Татьяна Калашникова\Desktop\PYTHON1')
+# os.chdir ('C:\Users\Татьяна Калашникова\Desktop\PYTHON1')
 
 # Узнать, в каком директории мы находимся: Get Current Working Directory
 
-print(os.getcwd ())
+# print(os.getcwd ())
 
 # Модуль os.path вложен в модуль path и реализует некоторые полезные 
 # функции для работы с путями, такие как: 
 
-os.path.basename(path ) # - базовое имя пути ("последняя миля")
+# os.path.basename(path ) # - базовое имя пути ("последняя миля")
 
-os.path.abspath(path) # - возвращает нормализованный абсолютный путь
+# os.path.abspath(path) # - возвращает нормализованный абсолютный путь
 
-print (os.path.abspath('main.ru'))
+# print (os.path.abspath('main.ru'))
