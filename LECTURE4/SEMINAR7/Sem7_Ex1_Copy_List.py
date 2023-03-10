@@ -1,7 +1,7 @@
 values = [1, 23, 42, 'asdf']
 
 transformation = lambda x: x
-transformed_values = list(map(transform, values))
+transformed_values = list(map(transformation, values))
 
 if values == transformed_values: 
     print('ok')
