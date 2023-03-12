@@ -7,13 +7,36 @@
 
 # РЕШЕНИЕ: 
 
-n = int(input("Введите кол-во элементов в массиве => "))
+# n = int(input("Введите кол-во элементов в массиве => "))
 
-print("Теперь по одному вводите элементы массива: ")
+# print("Теперь по одному вводите элементы массива: ")
 
-array = [int(input(f"{i+1}-й    : ")) for i in range(n)]
+# array = [int(input(f"{i+1}-й    : ")) for i in range(n)]
 
-x = int(input("Какое число будем считать? => "))
+# x = int(input("Какое число будем считать? => "))
 
-print(f"РЕЗУЛЬТАТ: \nЧисло {x} встречается в вашем массиве {array.count(x)} раз(а).")
+# print(f"РЕЗУЛЬТАТ: \nЧисло {x} встречается в вашем массиве {array.count(x)} раз(а).")
+
+# Вариант 1, разобранный на семинаре 4 (две строчки): 
+
+# list_nums = [int(input()) for _ in range(int(input))]
+# print(list_nums.count(int(input)))
+
+# Вариант 2, разобранный на семинаре 4: 
+
+from random import choices
+num = int(input())
+list_nums = choices(range(abs(num-5)), k=num)
+# Функция choices формирует список с повторениями из заданной 
+# последовательности элементов. 
+# random.choices(population, weights=None, *, cum_weights=None, k=1)
+# Последний параметр k задает длину результирующего списка. 
+# k может быть больше длины первого аргумента, так как choices 
+#  допускает повторения. 
+
+print(list_nums)
+
+result = list_nums.count(int(input()))
+print(result)
+
 
