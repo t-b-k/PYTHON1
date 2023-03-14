@@ -62,3 +62,20 @@ if can_be_poem (if_poem) :
 else: 
     print("Пам парам... Ваши стихи не являются стихами с точки зрения поэзии Винни-Пуха.")
 
+# Разобрано на семинаре. 
+
+# alp = "аеёиоуыэюя"
+# word_sug = input().split()
+# vowel_letters = [word.count(char) for word in word_sug 
+#                  for char in word if char.lower() in alp]
+
+# vowel_letters = []
+# for word in word_sug : 
+#       for char in word.lower() :
+#           if char in alp : 
+#               vowel_letters.append(char)
+#  
+# if len(set(vowel_letters)) == 1 : 
+#     print("Парам пам-пам")
+# else : 
+#     print("Пам парам")
