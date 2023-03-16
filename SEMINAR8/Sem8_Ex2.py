@@ -42,11 +42,12 @@ def show_all () :
         print("Empty data!")
 
 def add_new_contact() : 
-    global last_it
+    global last_id
     array = ["Surname", "Name", "Patronymic", "Phone_number"]
     string = "" 
     for i in array : 
         string += input(f"Enter {i} => ") + " "
+    all_data.append(string)
 # Добавить строку, проверяющую наличие такой записи
 # При внесении изменений в базу тоже надо проверять на появление дубликатов
     last_id += 1

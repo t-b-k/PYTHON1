@@ -1,7 +1,4 @@
 import view
-import data_input
-
-
 
 # Метод show_all принимает на вход список словарей вида 
 # [{"ID":<Номер записи>, "Name":<Имя_чел>, "Surname":<Отчество>, ... "Tel":<Телефон>}, 
@@ -19,19 +16,19 @@ def show_all (data) :
 # строковые значения ФИО с уже примененной к ним функцией capitalize()
 
 def find_by_last_name (data) : 
-    last_name = data_input.get_last_name()
+    last_name = view.get_last_name()
     records_of_interest = [data[i] for i in range(len(data)) if data[i][1] == last_name]
     view.show_data(records_of_interest) 
     return records_of_interest
 
 def find_by_name (data) : 
-    name = data_input.get_name()
+    name = view.get_name()
     records_of_interest = [data[i] for i in range(len(data)) if data[i][2] == name]
     view.show_data(records_of_interest) 
     return records_of_interest
 
 def find_by_patronymic (data) : 
-    patronymic = data_input.get_patronymic()
+    patronymic = view.get_patronymic()
     records_of_interest = [data[i] for i in range(len(data)) if data[i][3] == patronymic]
     view.show_data(records_of_interest) 
     return records_of_interest
@@ -40,13 +37,13 @@ def find_by_patronymic (data) :
 # строку из 13-ти цифр, и в таком же виде телефоны хранятся в нашей базе
 
 def find_by_telephone (data) : 
-    patronymic = data_input.get_telephone()
+    patronymic = view.get_telephone()
     records_of_interest = [data[i] for i in range(len(data)) if data[i][4] == patronymic]
     view.show_data(records_of_interest) 
     return records_of_interest
 
 def add_new_contact (data) : 
-    new_contact = data_input.get_new_contact() 
+    new_contact = view.get_new_contact() 
 # Функция get_new_contact должна возвращать словарь с данными нового контакта 
 # с ключом (last_id+1), если у нас last_id - глобальная для всех модулей
     indeed_new = True
