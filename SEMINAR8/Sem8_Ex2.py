@@ -16,15 +16,30 @@
 # Поисковую функцию можно разбить на другие функции 
 
 from os import path
+
 file_base = "base.txt"
 # Чтение - режим по умолчанию!!! 
 
-last_id = 0
-all_data = []
+last_id = 0 
+# ID (не индекс!!!) последней добавленной в базу данных записи
+# При удалении записи ID других записей остаются без изменения
+all_data = [] 
+# Список строк для временного хранения содержимого файла телефонного справочника
 
+# Если файл по такому пути и имени не найден, создаем пустой файл с таким именем
 if not path.exists(file_base) : 
     with open (file_base, "w", encoding="utf-8") as _: 
-        pass
+        last_id = 0
+else : 
+    with open (file_base, "r", encoding="utf-8") as f: 
+        last_line = f.readlines()[-1]
+        last_id = int(last_line.split()[0])
+
+print(f"Индекс последней записи в справочнике равен {last_id}")
+
+# Функция read_records() возвращает список строк из файла, 
+# присваивая глобальной переменной last_id индекс последней записи 
+# в телефонном справочнике
     
 def read_records() : 
     global last_id, all_data
@@ -48,6 +63,7 @@ def add_new_contact() :
     for i in array : 
         string += input(f"Enter {i} => ") + " "
     all_data.append(string)
+
 # Добавить строку, проверяющую наличие такой записи
 # При внесении изменений в базу тоже надо проверять на появление дубликатов
     last_id += 1
