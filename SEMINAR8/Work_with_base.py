@@ -15,8 +15,8 @@ def show_all () :
     else: 
         print("В справочнике нет ни одной записи")
 
-# Функция возвращает строку из букв и возвращает ту же строку, 
-# преобразовав ее в Title. 
+# Функция принимает из консоли буквенную строку и возвращает ее же, 
+# преобразованную в Title. 
 # Если пользователь не справился со вводом, возвращает пустую строку
 
 def input_word () : 
@@ -114,13 +114,14 @@ def add_new_contact () :
         print("Вы не справились с вводом кода страны. Считаем, что это Россия (+7).")
         country_code == "+7"
 
+def remove_contact() : 
+
 
 def read_records() : 
     global last_id, all_data, database
     if last_id :  
         with open(database, encoding="utf-8") as f : 
             all_data = [i.strip() for i in f]
-        
         return all_data
     return []
 
