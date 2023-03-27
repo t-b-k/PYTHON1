@@ -49,7 +49,7 @@ def read_records_from_txt (txt_file_name) :
 def add_records_to_txt (txt_file_name) :
     global all_data
     with open (txt_file_name, "a", encoding="utf-8") as f :
-        txt_file_name.write("\n")
+        f.write("")
         for i in all_data : 
             f.writelines(" ".join(i[1:])+"\n")
 
@@ -545,8 +545,10 @@ def main_menu () :
                                   " 1 - Перезаписываем, 2 - Добавляем, 0 - Отмена экспорта ===>"))
                             if to_do == 1 : 
                                 write_records_to_txt(file_name)
+                                print(f"Справочник записан в файл{file_name}\n")
                             elif to_do == 2 : 
                                 add_records_to_txt(file_name)
+                                print(f"Справочник добавлен в файл{file_name}\n")
                             else : 
                                 print("Операция экспорта не выполнена!\n")  
                         else : 
